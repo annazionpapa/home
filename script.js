@@ -87,6 +87,19 @@ function openSite(url) {
     }
 }
 
+// 그룹 이름 수정
+function editGroup(groupId) {
+    const group = groups.find(g => g.id === groupId);
+    if (group) {
+        const newName = prompt('그룹 이름을 입력하세요:', group.name);
+        if (newName !== null) {
+            group.name = newName;
+            saveGroups();
+            renderGroups();
+        }
+    }
+}
+
 // 그룹 렌더링
 function renderGroups() {
     groupsContainer.innerHTML = '';
@@ -95,7 +108,7 @@ function renderGroups() {
         groupElement.className = 'group';
         groupElement.innerHTML = `
             <div class="group-header">
-                <div class="group-title">${group.name}</div>
+                <div class="group-title" onclick="editGroup(${group.id})">${group.name}</div>
                 <div>
                     <button onclick="addSite(${group.id})">사이트 추가</button>
                     <button onclick="deleteGroup(${group.id})">그룹 삭제</button>
