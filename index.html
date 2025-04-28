@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>홈 대시보드</h1>
+            <div class="header-buttons">
+                <button id="addGroup">새 그룹 추가</button>
+                <button onclick="toggleDeleteMode()" id="deleteModeButton">삭제 모드</button>
+                <button onclick="deleteSelectedSites()" id="deleteSelectedButton" style="display: none;">선택한 사이트 삭제</button>
+            </div>
+        </div>
+        <div id="groups" class="groups-container">
+            <!-- 그룹들이 여기에 추가됩니다 -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
