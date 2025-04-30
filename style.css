@@ -38,7 +38,7 @@ body {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     position: relative;
 }
@@ -61,7 +61,6 @@ body {
     margin-left: auto;
     position: relative;
     z-index: 1;
-    margin-right: 200px;
 }
 
 button {
